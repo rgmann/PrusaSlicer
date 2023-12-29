@@ -174,6 +174,7 @@ int CLI::run(int argc, char **argv)
         m_print_config.apply(config);
     }
 
+#if SLIC3R_GUI
 #if ENABLE_GL_CORE_PROFILE
     // search for special keys into command line parameters
     auto it = std::find(m_actions.begin(), m_actions.end(), "gcodeviewer");
@@ -222,6 +223,7 @@ int CLI::run(int argc, char **argv)
         }
     }
 #endif // ENABLE_GL_CORE_PROFILE
+#endif // SLIC3R_GUI
 
     // Read input file(s) if any.
     for (const std::string& file : m_input_files)
