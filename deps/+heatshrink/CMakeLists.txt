@@ -50,6 +50,7 @@ endif ()
 
 install(TARGETS ${_exported_targets}
         EXPORT ${PROJECT_NAME}Targets
+        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 export(EXPORT ${PROJECT_NAME}Targets 
